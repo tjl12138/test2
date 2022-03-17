@@ -1,0 +1,61 @@
+#include <stdio.h>
+#define ROW 6
+#define COL 6
+char map [ROW][COL+1]={
+{"**#*##"},
+{"#*#*#*"},
+{"**#*##"},
+{"*#***#"}，
+{"***#*#"},
+{"##*#**"},
+};
+void print_map()
+{
+    for (int i=0;i<ROW;i++)
+    {
+        puts(map[i];
+    }
+}
+void show_cursor(int x,y)
+{
+    COORD pos;
+    pos,X=x;
+    pos,Y=y;
+    printf("cur X=%d,cur Y=%d\n",x,y);
+    Set Console Cursor Position(GetStdHandle(STD_OUTPUT_HANDLE),pos);
+}
+    int main()
+    {
+        while(1)
+        {
+            print_map();
+            show_cursor(cur X,cur Y);
+            char t=getch();
+            if(t=='w')
+            {
+                //向上走
+                if{(cur Y-1>=0&&(map[cur X】=='*'||map[cur Y-1][cur X]=='E')} cur Y--;
+            }
+            else if(t=='a')
+            {
+                //向下走
+                if{(cur Y+1)<ROW&&(map[cur Y+1][cur X]=='*'||map [cur Y+1][cur X]=='E')} cur Y++;
+            }
+            else if(t=='s')
+            {
+                //向左走
+                if{(cur X-1)>=0&&(map[cur Y][cur X-1]=='*'||map [cur Y][cur X-1]=='E')} cur X--;
+            }
+            else if(t=='d')
+            {
+                //向右走
+                if{(cur X+1)<COL&&(map[cur Y][cur X+1]=='*'||map[cur Y][cur X+1)} cur X++;
+            }
+            if (mqp[cur Y][cur X+1]=='E'
+            {
+                break;
+            }
+        }
+        return 0;
+    }
+}
